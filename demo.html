@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Demo</title>
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- JS -->
+  <script src="dist/vendor/jquery-2.0.0.min.js"></script>
+  <script src="dist/theme.dev.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="#" class="nav">Demo</a>
+    <a href="#" class="nav toggle rightside" data-trigger="collapse">
+      <span class="octicon octicon-three-bars"></span>
+    </a>
+    <div class="collapse">
+      <ul class="navs">
+        <li><a href="#">Item1</a></li>
+        <li><a href="#">Item2</a></li>
+        <li><a href="#">Item3</a></li>
+        <li><a href="#">Item4</a></li>
+        <li><a href="#">Item5</a></li>
+      </ul>
+      <ul class="navs rightside">
+        <li><a href="#">Item6</a></li>
+        <li><a href="#">Item7</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Main Content -->
+<div class="container">
+<!-- Standard Headings -->
+<h1>Heading</h1>
+<h2>Heading</h2>
+<h3>Heading</h3>
+<h4>Heading</h4>
+<h5>Heading</h5>
+<h6>Heading</h6>
+<!-- Base type size -->
+<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+<p>我可以吞下玻璃而不伤身体。</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<!-- Other styled text tags -->
+<p>
+<strong>Bolded</strong>
+<em>Italicized</em>
+<a href="#">Colored</a>
+<u>Underlined</u>
+</p>
+<button class="button">Subscribe!</button>
+<hr>
+<h3>Next Sample</h3>
+<!-- Standard buttons -->
+<p>
+<a class="button" href="#">Button element</a>
+<button class="button">Button element</button>
+<input class="button" type="submit" value="Button element">
+<input class="button" type="button" value="Button element">
+</p>
+<!-- Primary buttons -->
+<p>
+<a class="button primary" href="#">Button element</a>
+<button class="button primary">Button element</button>
+<input class="button primary" type="submit" value="Button element">
+<input class="button primary" type="button" value="Button element">
+</p>
+<!-- Various buttons -->
+<p>
+<button class="button default">Button</button>
+<button class="button primary">Button</button>
+<button class="button info">Button</button>
+<button class="button success">Button</button>
+<button class="button warning">Button</button>
+<button class="button danger">Button</button>
+</p>
+<!-- Dropdown buttons -->
+<div>
+  <div class="menu">
+    <button class="button" data-trigger="dropdown">Menu
+      <span class="octicon octicon-chevron-down"></span>
+    </button>
+    <ul class="dropdown">
+      <li><a href="#">Item One</a></li>
+      <li><a href="#">Item Two</a></li>
+      <li><a href="#">Item Three</a></li>
+    </ul>
+  </div>
+  <div class="menu">
+    <button class="button" data-trigger="dropdown">Down Menu
+      <span class="octicon octicon-chevron-up"></span>
+    </button>
+    <ul class="dropdown downside">
+      <li><a href="#">Item One</a></li>
+      <li><a href="#">Item Two</a></li>
+      <li><a href="#">Item Three</a></li>
+    </ul>
+  </div>
+  <div class="menu">
+    <button class="button" data-trigger="dropdown">Sub Menu
+      <span class="octicon octicon-chevron-down"></span>
+    </button>
+    <ul class="dropdown">
+      <li><a href="#">Item One</a></li>
+      <li><a href="#">Item Two</a></li>
+      <li>
+        <a href="#">Item Three
+          <span class="octicon octicon-chevron-right"></span>
+        </a>
+        <ul class="dropdown">
+          <li><a href="#">Subitem One</a></li>
+          <li>
+            <a href="#">Subitem Two
+              <span class="octicon octicon-chevron-right"></span>
+            </a>
+            <ul class="dropdown">
+              <li><a href="#">Item One</a></li>
+              <li><a href="#">Item Two</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Subitem Three</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="menu">
+    <button class="button" data-trigger="dropdown">Down Sub Menu
+      <span class="octicon octicon-chevron-up"></span>
+    </button>
+    <ul class="dropdown downside">
+      <li><a href="#">Item One</a></li>
+      <li><a href="#">Item Two</a></li>
+      <li>
+        <a href="#">Item Three
+          <span class="octicon octicon-chevron-right"></span>
+        </a>
+        <ul class="dropdown">
+          <li><a href="#">Subitem One</a></li>
+          <li>
+            <a href="#">Subitem Two
+              <span class="octicon octicon-chevron-right"></span>
+            </a>
+            <ul class="dropdown">
+              <li><a href="#">Item One</a></li>
+              <li><a href="#">Item Two</a></li>
+              <li><a href="#">Item Three</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Subitem Three</a></li>
+          <li><a href="#">Subitem Four</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="pull-right">
+    <div class="menu">
+      <button class="button" data-trigger="dropdown">Right Menu
+        <span class="octicon octicon-chevron-down"></span>
+      </button>
+      <ul class="dropdown rightside">
+        <li><a href="#">Item One</a></li>
+        <li><a href="#">Item Two</a></li>
+        <li><a href="#">Item Three</a></li>
+      </ul>
+    </div>
+    <div class="menu">
+      <button class="button" data-trigger="dropdown">Right Sub Menu
+        <span class="octicon octicon-chevron-down"></span>
+      </button>
+      <ul class="dropdown rightside">
+        <li><a href="#">Item One</a></li>
+        <li><a href="#">Item Two</a></li>
+        <li>
+          <a href="#">Item Three
+            <span class="octicon octicon-chevron-left"></span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="#">Subitem One</a></li>
+            <li>
+              <a href="#">Subitem Two
+                <span class="octicon octicon-chevron-left"></span>
+              </a>
+              <ul class="dropdown">
+                <li><a href="#">Item One</a></li>
+                <li><a href="#">Item Two</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Subitem Three</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="menu">
+      <button class="button" data-trigger="dropdown">Right Down Sub Menu
+        <span class="octicon octicon-chevron-up"></span>
+      </button>
+      <ul class="dropdown downside rightside">
+        <li><a href="#">Item One</a></li>
+        <li><a href="#">Item Two</a></li>
+        <li>
+          <a href="#">Item Three
+            <span class="octicon octicon-chevron-left"></span>
+          </a>
+          <ul class="dropdown">
+            <li><a href="#">Subitem One</a></li>
+            <li>
+              <a href="#">Subitem Two
+                <span class="octicon octicon-chevron-left"></span>
+              </a>
+              <ul class="dropdown">
+                <li><a href="#">Item One</a></li>
+                <li><a href="#">Item Two</a></li>
+                <li><a href="#">Item Three</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Subitem Three</a></li>
+            <li><a href="#">Subitem Four</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- Toast -->
+<div>
+  <button class="button" data-trigger="toast">Show Toast</button>
+  <div class="toast">
+    <p>
+      <span class="octicon octicon-bell"></span>
+      <b>Notice:</b> This is a message for notification.
+    </p>
+  </div>
+</div>
+<!-- The above form looks like this -->
+<h3>Form Sample</h3>
+<form style="max-width: 480px;">
+  <label for="exampleEmailInput">Your email</label>
+  <div class="field">
+    <input class="control" type="email" placeholder="my.mail@mailbox.com" id="exampleEmailInput">
+  </div>
+  <label for="exampleTextInput">Username</label>
+  <div class="field group">
+    <input class="control" type="text" placeholder="Dave Gamache" id="exampleTextInput">
+    <span class="addon">Available!</span>
+  </div>
+  <label for="exampleNumberInput">Donate</label>
+  <div class="field group">
+    <span class="addon">$</span>
+    <input class="control" type="number" placeholder="1" id="exampleNumberInput">
+  </div>
+  <label for="examplePasswordInput">Password</label>
+  <div class="field">
+    <input class="control" type="password" id="examplePasswordInput">
+  </div>
+  <label for="exampleRecipientInput">Reason for contacting</label>
+  <div class="field">
+    <select class="control" id="exampleRecipientInput">
+      <option value="Option 1">Questions</option>
+      <option value="Option 2">Admiration</option>
+      <option value="Option 3">Can I get your number?</option>
+    </select>
+  </div>
+  <label for="exampleMessage">Message</label>
+  <div class="field">
+    <textarea class="control" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+  </div>
+  <div class="field">
+    <label class="example-send-yourself-copy">
+      <input type="checkbox">
+      <span>Send a copy to yourself</span>
+    </label>
+  </div>
+  <div class="field">
+    <input class="button primary" type="submit" value="Submit">
+  </div>
+</form>
+<!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
+<!-- Note: The class .full-width is just a utility class shorthand for width: 100% -->
+<ul>
+  <li>Item 1</li>
+  <li>
+    Item 2
+    <ul>
+      <li>Item 2.1</li>
+      <li>Item 2.2</li>
+    </ul>
+  </li>
+  <li>
+    Item 2.5
+    <ol>
+      <li>Item 1</li>
+      <li>
+        Item 2
+        <ol>
+          <li>Item 2.1</li>
+          <li>Item 2.2</li>
+        </ol>
+      </li>
+      <li>Item 3</li>
+    </ol>
+  </li>
+  <li>Item 3</li>
+</ul>
+<!-- Easily substitute any <ul> or an <ol> to get number lists or sublists. Skeleton doesn't support lists nested deeper than 2 levels -->
+<p>Run this command <code>gem install ruby-demo</code> to install this package.</p>
+<pre><code># Class names must be capitalized.  Technically, it's a constant.
+class Fred
+
+  # The initialize method is the constructor.  The @val is
+  # an object value.
+  def initialize(v)
+    @val = v
+  end
+
+  # Set it and get it.
+  def set(v)
+    @val = v
+  end
+
+  def get
+    return @val
+  end
+end
+
+# Objects are created by the new method of the class object.
+a = Fred.new(10)
+b = Fred.new(22)
+</code></pre>
+<!-- Remember every whitespace and break will be preserved in a <pre>, including indentation in your code -->
+<hr>
+<table class="table striped full-width">
+  <caption>Striped table</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Sex</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dave Gamache</td>
+      <td>26</td>
+      <td>Male</td>
+      <td>San Francisco</td>
+    </tr>
+    <tr>
+      <td>Dwayne Johnson</td>
+      <td>42</td>
+      <td>Male</td>
+      <td>Hayward</td>
+    </tr>
+    <tr>
+      <td>Dave Gamache</td>
+      <td>26</td>
+      <td>Male</td>
+      <td>San Francisco</td>
+    </tr>
+    <tr>
+      <td>Dwayne Johnson</td>
+      <td>42</td>
+      <td>Male</td>
+      <td>Hayward</td>
+    </tr>
+    <tr>
+      <td>Dave Gamache</td>
+      <td>26</td>
+      <td>Male</td>
+      <td>San Francisco</td>
+    </tr>
+    <tr>
+      <td>Dwayne Johnson</td>
+      <td>42</td>
+      <td>Male</td>
+      <td>Hayward</td>
+    </tr>
+  </tbody>
+</table>
+<table class="table bordered full-width">
+  <caption>Bordered table</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Sex</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dave Gamache</td>
+      <td>26</td>
+      <td>Male</td>
+      <td>San Francisco</td>
+    </tr>
+    <tr>
+      <td>Dwayne Johnson</td>
+      <td>42</td>
+      <td>Male</td>
+      <td>Hayward</td>
+    </tr>
+    <tr>
+      <td>Dave Gamache</td>
+      <td>26</td>
+      <td>Male</td>
+      <td>San Francisco</td>
+    </tr>
+    <tr>
+      <td>Dwayne Johnson</td>
+      <td>42</td>
+      <td>Male</td>
+      <td>Hayward</td>
+    </tr>
+    <tr>
+      <td>Dave Gamache</td>
+      <td>26</td>
+      <td>Male</td>
+      <td>San Francisco</td>
+    </tr>
+    <tr>
+      <td>Dwayne Johnson</td>
+      <td>42</td>
+      <td>Male</td>
+      <td>Hayward</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</body>
+</html>

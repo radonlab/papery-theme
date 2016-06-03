@@ -1,0 +1,25 @@
+// Toast
+// -----------------------------------------------------------------------------
+
+// Variables
+// -----------------------------------------------------------------------------
+@toast-back-color: #FFF;
+@toast-shadow-color: rgba(0, 0, 0, 0.2);
+// -----------------------------------------------------------------------------
+// End
+
+.toast {
+  .collapsible();
+  .fadable(3s);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  min-width: 32rem;
+  background-color: @toast-back-color;
+  padding: 1rem 2rem 0;
+  margin: 1rem;
+  border: 1px solid @toast-shadow-color;
+  border-radius: @global-radius;
+  .box-shadow(0 2px 8px @toast-shadow-color);
+}

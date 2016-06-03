@@ -1,0 +1,102 @@
+// Navbar
+// -----------------------------------------------------------------------------
+
+// Variables
+// -----------------------------------------------------------------------------
+@navbar-padding-y: 4px;
+@navbar-item-padding-x: 1.5rem;
+@navbar-item-padding-y: 0.5rem;
+@navbar-text-color: #FEFEFE;
+@navbar-back-color: #335AC5;
+// -----------------------------------------------------------------------------
+// End
+
+.navbar {
+  .clearfixed();
+  position: relative; // referenced by the expanded items
+  z-index: 1000;
+  padding: @navbar-padding-y 0;
+  background-color: @navbar-back-color;
+
+  a {
+    padding: @navbar-item-padding-y @navbar-item-padding-x;
+    text-decoration: none;
+    color: @navbar-text-color;
+  }
+
+  .nav {
+    float: left;
+
+    &.rightside {
+      float: right;
+    }
+  }
+
+  .toggle {
+    @media (min-width: @bp-larger-than-tablet) {
+      display: none; // hide on large screen
+    }
+  }
+
+  .collapse {
+    .clearfixed();
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+
+    @media (min-width: @bp-larger-than-tablet) {
+      position: static;
+      top: auto;
+      right: auto;
+      left: auto;
+      display: block; // show collapsed items on large screen
+    }
+  }
+
+  .navs {
+    .clearfixed();
+    margin: 0 auto;
+    list-style: none;
+    background-color: @navbar-back-color;
+    border-top: 1px dashed darken(@navbar-back-color, 10%);
+
+    @media (min-width: @bp-larger-than-tablet) {
+      border-top: none;
+      float: left; // layout inline on large screen
+
+      &.rightside {
+        float: right;
+      }
+    }
+
+    & > li {
+      display: block;
+      margin: 0 auto;
+
+      @media (min-width: @bp-larger-than-tablet) {
+        float: left;
+      }
+
+      > a {
+        display: block;
+        &:hover {
+          background-color: darken(@navbar-back-color, 5%);
+        }
+      }
+    }
+  }
+
+  .container .navs > li {
+    padding: 0 2rem; // align to the container horizontally
+
+    @media (min-width: @bp-larger-than-phablet) {
+      padding: 0; // reset padding on medium screen
+      width: 85%;
+    }
+
+    @media (min-width: @bp-larger-than-tablet) {
+      width: auto; // reset width on large screen
+    }
+  }
+}

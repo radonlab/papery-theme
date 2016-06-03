@@ -1,0 +1,84 @@
+// Menu
+// -----------------------------------------------------------------------------
+
+// Variables
+// -----------------------------------------------------------------------------
+@menu-margin-y: 2px;
+@menu-padding-y: 3px;
+@menu-border-width: 1px;
+@menu-text-color: #333333;
+@menu-back-color: #FFFFFF;
+@menu-focus-color: #EEEEEE;
+@menu-shadow-color: rgba(0, 0, 0, 0.15);
+// -----------------------------------------------------------------------------
+// End
+
+.menu {
+  position: relative;
+  display: inline-block;
+
+  .dropdown {
+    .collapsible();
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 16rem;
+    max-width: 32rem;
+    margin: @menu-margin-y 0;
+    padding: @menu-padding-y 0;
+    list-style: none;
+    background-color: @menu-back-color;
+    border: @menu-border-width solid @border-color;
+    border-radius: @global-radius;
+    .box-shadow(0 2px 8px @menu-shadow-color);
+
+    &.rightside {
+      right: 0;
+      left: auto;
+    }
+
+    &.downside {
+      top: auto;
+      bottom: 100%;
+    }
+
+    > li {
+      position: relative; // referenced by the submenu
+      margin: 0;
+
+      > a {
+        display: block;
+        padding: 0 1.2rem;
+        white-space: nowrap;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: @menu-text-color;
+
+        &:hover,
+        &:focus {
+          background-color: @menu-focus-color;
+        }
+      }
+    }
+
+    .dropdown {
+      top: 0;
+      left: 100%;
+      margin-top: -(@menu-border-width + @menu-padding-y);
+    }
+
+    &.rightside .dropdown {
+      right: 100%;
+      left: auto;
+    }
+
+    &.downside .dropdown {
+      top: auto;
+      bottom: 0;
+      margin-top: @menu-margin-y;
+      margin-bottom: -(@menu-border-width + @menu-padding-y);
+    }
+  }
+}

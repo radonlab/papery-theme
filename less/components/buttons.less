@@ -1,0 +1,63 @@
+// Buttons
+// -----------------------------------------------------------------------------
+
+// Mixins
+// -----------------------------------------------------------------------------
+.button-variant(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border: @global-border-width solid @border;
+
+  &:hover,
+  &:focus {
+    background-color: lighten(@background, 5%);
+    border-color: darken(@border, 5%);
+  }
+}
+// -----------------------------------------------------------------------------
+// End
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  height: 3.4rem;
+  padding: 0.6rem 1.2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  .button-variant(@dark-text-color; @default-color; @default-color);
+  border-radius: @global-radius;
+  .box-sizing(border-box);
+
+  &.default {
+    .button-variant(@dark-text-color; @default-color; @default-color);
+  }
+
+  &.primary {
+    .button-variant(@light-text-color; @primary-color; @primary-color);
+  }
+
+  &.info {
+    .button-variant(@light-text-color; @info-color; @info-color);
+  }
+
+  &.success {
+    .button-variant(@light-text-color; @success-color; @success-color);
+  }
+
+  &.warning {
+    .button-variant(@light-text-color; @warning-color; @warning-color);
+  }
+
+  &.danger {
+    .button-variant(@light-text-color; @danger-color; @danger-color);
+  }
+}
+
+a.button {
+  &:hover {
+    text-decoration: none;
+  }
+}

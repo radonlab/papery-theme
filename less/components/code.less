@@ -1,0 +1,38 @@
+// Code
+// -----------------------------------------------------------------------------
+
+// Variables
+// -----------------------------------------------------------------------------
+@code-text-color: #CF2552;
+@code-back-color: #F8F3F5;
+@codeblock-text-color: #555555;
+@codeblock-back-color: #F8F8F8;
+@codeblock-border-color: #EEEEEE;
+@codeblock-border-width: 1px;
+// -----------------------------------------------------------------------------
+// End
+
+code,
+kbd,
+pre,
+samp {
+  font-family: @font-family-monospace;
+}
+
+code {
+  padding: 0.2rem 0.4rem;
+  font-size: 90%;
+  color: @code-text-color;
+  background-color: @code-back-color;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border-radius: @global-radius;
+}
+
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: @codeblock-text-color;
+  background-color: @codeblock-back-color;
+  border: @codeblock-border-width solid @codeblock-border-color;
+}

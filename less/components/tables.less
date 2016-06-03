@@ -1,0 +1,62 @@
+// Tables
+// -----------------------------------------------------------------------------
+
+// Variables
+// -----------------------------------------------------------------------------
+@table-back-color: #FFFFFF;
+@table-strip-color: #EEF2F8;
+// -----------------------------------------------------------------------------
+// End
+
+.table {
+  background-color: @table-back-color;
+
+  > caption {
+    color: @muted-text-color;
+    text-align: left;
+    padding: 0.8rem 0;
+  }
+
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        text-align: left;
+        padding: 0.8rem;
+      }
+    }
+  }
+
+  > thead > tr > th {
+    border-bottom: 2px solid @border-color;
+  }
+
+  > tbody + tbody {
+    border-bottom: 2px solid @border-color;
+  }
+
+  &.bordered {
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          border: 1px solid @border-color;
+        }
+      }
+    }
+
+    > thead > tr > th {
+      border-bottom: 2px solid @border-color;
+    }
+  }
+
+  &.striped {
+    > tbody > tr:nth-of-type(odd) {
+      background-color: @table-strip-color;
+    }
+  }
+}
