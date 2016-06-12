@@ -4,8 +4,6 @@ var url = require('url');
 var del = require('del');
 var webpack = require('webpack');
 var packer = require('webpack-stream');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
 
 function getConfig(name, prefix, production) {
   var conf = {
@@ -53,15 +51,6 @@ gulp.task('build', function() {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('support', function() {
-  return gulp.src('vendor/*.js')
-    .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('dist/vendor/'));
-});
-
 gulp.task('clean', function() {
   return del.sync([
     'dist/*.dev.js',
@@ -71,4 +60,4 @@ gulp.task('clean', function() {
 
 gulp.task('rebuild', ['clean', 'build']);
 
-gulp.task('default', ['rebuild', 'support']);
+gulp.task('default', ['rebuild']);
