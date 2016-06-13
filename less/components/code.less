@@ -29,10 +29,14 @@ code {
   border-radius: @global-radius;
 }
 
-pre > code {
-  display: block;
-  padding: 1rem 1.5rem;
-  color: @codeblock-text-color;
-  background-color: @codeblock-back-color;
-  border: @codeblock-border-width solid @codeblock-border-color;
+pre {
+  margin: 0 0 1.5rem;
+
+  & > code {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: @codeblock-text-color;
+    background-color: @codeblock-back-color;
+    border: @codeblock-border-width solid @codeblock-border-color;
+  }
 }
